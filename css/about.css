@@ -21,7 +21,10 @@ ul li{
     margin-right: 1.2vw;
     
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 h3{
     font-size: 8px;
    padding: 0 auto;
