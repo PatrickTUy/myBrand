@@ -137,8 +137,94 @@ nav ul{
     height: 47px;
     background: #C4C4C4;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 0 ;
     outline: none;
     border: none;
+}
+@media screen and (max-width: 800px){
+    nav{
+        width: 100%;
+        height: 100%;
+        background: #ED9D7B;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 0 40px; */
+        font-size: 10px;
+    }
+
+    li{
+        margin: 2%;
+    }
+    .body{
+        display: block;
+        height: calc( 100vh - 122px );
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+        /* position: relative; */
+        width: 100%;
+        height: 20%;
+        background: hsl(18, 76%, 71%);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body{
+        width: 100%;
+        height: 100%
+    }
+
+    h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .box2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+    }
+    .box1{
+        width: 80%;
+        height: 50%;
+        background: #292929;
+        border-radius: 20px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 53.5px;
+    }
+     .container{
+        max-width: 100%;
+        min-height: 90%;
+        margin: 0 auto;
+    }
+    h1{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 96px;
+        width: 40%;
+        
+    }
+    
+    h2{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 40px;
+        width: 25%;
+    }
+
+
 }
 
