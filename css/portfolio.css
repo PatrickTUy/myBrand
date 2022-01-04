@@ -1,0 +1,225 @@
+nav{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display:flex;
+    justify-content: space-around;
+    height: 61px;
+    background: #ED9D7B;
+    align-items: center; 
+}
+ul{
+   
+    align-items: center;
+    display: flex; 
+    justify-content: space-between; 
+    list-style-type: none;
+    padding: 0%;
+    
+
+}
+.undernav{
+    margin-top: 61px;
+}
+
+li{
+
+   margin:7%;
+} 
+
+a{
+   text-decoration: none;
+   color: black;
+}
+a:hover{
+    color:yellow;
+}
+
+
+footer{
+    position: fixed;
+    bottom:0;
+    width: 100vw;
+    height: 61px;
+    background: hsl(18, 76%, 71%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+body{ 
+    width: 100vw;
+    margin: 0px;
+    height: 100vh;
+   
+}
+h3{
+  font-size: 18px;
+  font-weight: lighter;
+
+
+}
+.projects{
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+
+
+}
+.project1{
+    margin-right: 50px;
+    height: 50vh;
+    width: 100vw;
+    align-items: center;
+    border: 2px solid black;
+    
+}
+.project2{
+    height: 50vh;
+    width: 100vw;
+    align-items: center;
+    border: 2px solid black;
+}
+h1{
+    margin-top: 100px;
+    text-align: center;
+
+}
+h4{
+    margin-top: 10px;
+    font-family: cursive;
+}
+.undernav{
+    margin-top: 61px ;
+}
+.undernav h3{
+    font-family: cursive;
+    width: 80%;
+}
+.navbar h3{
+    font-weight: bold;
+}
+img{
+height:80%;
+width:100%;
+
+}
+a{
+    transition: 0.7s ease;
+}
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width:25px;
+    height:3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+
+}
+
+@media screen and (max-width:800px) {
+    .hamburger{
+        display:block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:61px;
+        gap: 0;
+        flex-direction: column ;
+        background-color: #ED9D7B;
+        width:100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+    .nav-item{
+        margin:16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    footer{
+        position:static;
+        width: 100vw;
+        height: 61px;
+        background: hsl(18, 76%, 71%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav{
+        display:flex;
+        justify-content: space-around;
+        width: 100vw;
+        height: 61px;
+        background: #ED9D7B;
+        align-items: center; 
+    }
+
+    li{
+         font-size: 15px;
+         margin: 0;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+        
+        
+        }
+        img{
+            height:60%;
+            width:100%;
+            
+            }
+            .project1{
+                margin-right:0;
+                height: 50vh;
+                width: 80vw;
+                align-items: center;
+                border: 2px solid black;
+                margin-bottom: 50px;
+                
+            }
+            .project2{
+                height: 40vh;
+                width: 80vw;
+                align-items: center;
+                border: 2px solid black;
+                margin-bottom: 25px;
+            }
+            .undernav h3{
+                margin-left: 10%;
+                width:80%;
+            }
+            h4{
+                margin: 0;
+            }
+            .nav-menu{
+                margin: 0;
+            }
+            .undernav{
+                margin-bottom: 61px;
+            }
+            
+
+}
