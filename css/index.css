@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+input{
+    border: none;
+    outline: none;
+    width:50%;
+    height:50vh
+}
+
+h1{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 37px;
+}
+
+h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 72px;
+    
+}
+
+h3{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    width:50%;
+    margin-bottom:10px;
+    
+}
+
+h4{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 155%;
+}
+
+
+
+/* footer bar */
+
+footer{
+    /* position: relative; */
+    width: 100%;
+    height:61px;;
+    background: hsl(18, 76%, 71%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* navigation bar */
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 61px;
+    background: #ED9D7B;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top:0;
+}
+
+.undernav{
+    margin-top: 61px;;
+}
+nav ul{
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile img{
+    width:50%;
+    height:auto;
+    margin-right: 60px;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-bottom: 75px;
+}
+.profile h3{
+    padding-top: 15px;
+    font-size: 30px;
+    line-height: 40px;
+
+}
+.profile img:hover {
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes anime {
+    100% {width:100%;
+    height:100%;}
+}
+ul{
+    gap: 20px;
+}
+
+input{
+    height:20px;
+    width: 250px;
+    background-color: #ED9D7B;
+    border-radius: 5px;
+    margin: 10px;
+}
+.textme{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    height:20px;
+    width:100px;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+
+.rolemodels{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.box2{
+    text-align: center;
+}
+.box2 img{
+    height:270px;
+    width:auto;
+}
+
+h2{
+    text-align: center;
+}
+.textme h3{
+    margin: 10px;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+
+li :hover{
+    color: yellow;
+
+}
+
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width:25px;
+    height:3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+
+}
+
+@media screen and (max-width: 800px){
+    .hamburger{
+        display:block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:61px;
+        gap: 0;
+        flex-direction: column ;
+        background-color: #ED9D7B;
+        width:100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+    .nav-item{
+        margin:16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    body{
+        width: 100vw;
+        height:auto;
+
+
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 61px;
+        background: #ED9D7B;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0px;
+        /* z-index:1; */
+        
+    }
+    
+    footer{
+        width: 100vw;
+        height: 61px;
+        background: hsl(18, 76%, 71%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rolemodels{
+        display: block;
+        
+    }
+    .profile{
+        margin-top:61px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    
+    .profile img{
+        width:100%;
+        height:auto;
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    .profile h3{
+        padding-top: 2px;
+        line-height: 20px;
+        font-size: 15px;
+    
+    }
+    
+    .box2{
+        text-align: none;
+    }
+    h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 15px;
+        margin: 0 ;
+    }
+    h2{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .box1 img{
+        width:100vw;
+        height:60vh;
+ 
+    }
+     .box2 img{
+        width:100vw;
+        height:40vh;
+     }
+     .box1{
+         margin: 0px;
+     }
+.box2{
+    margin: 0px;
+}
+.box2{
+    text-align: center;
+}
+.box1{
+    text-align: center;
+}
+.profile h3{
+width: fit-content;
+}
+
+}
