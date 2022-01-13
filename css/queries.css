@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap');
+
+body{
+    width:100%;
+    height:auto;
+    margin:0;padding:0;
+    background:url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png") ;
+  
+}
+
+*{
+    padding: 0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing: border-box;
+    font-family: "Josefin Sans",sans-serif;
+}
+/*NAVIGATION BAR */
+.navbar{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    font-family:cursive,sans-serif;
+    align-items: center;
+    }
+    .navbar-items {
+        display:flex;
+        gap:20px;
+        color: blue;
+    }
+    .navbar h3 a {
+        font-family: "Allura",sans-serif;
+        font-size: 40px;
+        color: blue;
+    }
+
+    h1{
+        text-align: center;
+    }
+    .main{
+        width:70%;
+        height:auto;
+        border:3px solid black;
+        margin:1em auto;
+        border-radius: 5px;
+    }
+    .visitor{
+        width:fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin:2em;
+        background: rgba(80, 110, 103, 0.226);
+        
+    }
+    .info1{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        height: auto;
+        margin-right: 1em;
+    }
+    .detail{
+        
+        width:100%;
+        height:auto;
+    }
+    .detail p{
+        width:100%;
+        font-size: 28px;
+    }
+    button{
+        margin-left: 1em;
+    }
+    /* FOOTER */
+footer{
+    text-align: center;
+}
+
+    @media screen and (max-width: 800px) {
+        .navbar{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+    
+        }
+    .navbar-items{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .main{
+        width:95%;
+        height:auto;
+        border:3px solid black;
+        margin:1em auto;
+        border-radius: 5px;
+        padding:1em;
+    }
+    .visitor{
+        width:100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        margin-bottom:2em;
+        background: rgba(80, 110, 103, 0.226);
+        
+    }
+    .info1{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+}

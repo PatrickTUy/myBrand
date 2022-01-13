@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap');
+body{
+    width:100%;
+    height:auto;
+    margin:0;padding:0;
+    background:url("../public/pexels-photomix-company-96622.jpg") ;
+    background-size: cover;
+  
+}
+
+*{
+    padding: 0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing: border-box;
+    font-family: "Josefin Sans",sans-serif;
+}
+
+/*NAVIGATION BAR */
+a{
+    color:white;
+}
+.projects button a{
+    color:rgb(48, 45, 45)
+}
+.navbar{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    font-family:cursive,sans-serif;
+    align-items: center;
+    margin-bottom: 1em;
+    }
+.navbar-items {
+    display:flex;
+    gap:20px;
+}
+.navbar h3 a{
+    font-family: "Allura",sans-serif;
+    font-size: 40px;
+    color: white;
+}
+/* PROJECT SECTION */
+.main{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-family: "Josefin Sans",sans-serif;
+    text-align: center;
+    margin-top: 1em;
+ } 
+
+h2{
+    margin: 3em 0em;  
+    font-size: 20px;
+    line-height: 25px;
+    width:70%;
+    text-align: center;
+
+}
+h1,h2{
+    color: white;
+}
+h4{
+    color:rgb(241, 224, 224);
+}
+.projects{
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 3em;
+
+
+}
+.project1{
+    
+    height: 55vh;
+    width: 40vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+.project2{
+    height: 55vh;
+    width: 40vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+.project1 h2{
+    font-size: 16px;
+}
+.project2 h2{
+    font-size: 16px;
+}
+img{
+    width:100%;
+    height:80%;
+}
+
+/* FOOTER*/
+footer{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    /*NAVIGATION BAR*/
+    .navbar{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .navbar-items{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+   /* PROJECT SECTION */
+   .projects{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 3em;
+
+
+}
+.project1{
+    
+    height: 55vh;
+    width: 85vw;
+    border: 1px solid black;
+    margin-bottom: 2em;
+    
+}
+.project2{
+    height: 55vh;
+    width: 85vw;
+    border: 1px solid black;
+    margin-bottom: 1em;
+}
+
+
+}

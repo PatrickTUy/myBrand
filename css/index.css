@@ -1,323 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-*{
-    color: black;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    list-style: none;
-    text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap');
+
 body{
-    width: 100%;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    width:100%;
+    height:auto;
+    margin:0;padding:0;
+    background-image: url(../public/pexels-fwstudio-129731\ \(1\).jpg);
+  
 }
 
-input{
-    border: none;
-    outline: none;
-    width:50%;
-    height:50vh
+*{
+    padding: 0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing: border-box;
+    font-family: "Josefin Sans",sans-serif;
+}
+.main{
+    padding: 1em 3em;
+    margin:4em;
+    background:url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+    border-radius: 5%;
 }
 
-h1{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 37px;
+/*NAVIGATION BAR */
+.navbar{
+width:100%;
+display:flex;
+justify-content: space-around;
+font-family:cursive,sans-serif;
+align-items: center;
 }
-
-h2{
-    font-style: normal;
-    font-weight: 700;
+.navbar-items {
+    display:flex;
+    gap:20px;
+}
+.navbar h3{
+    font-family: "Allura",sans-serif;
     font-size: 40px;
-    line-height: 72px;
-    
+    color: blue;
 }
 
-h3{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 30px;
-    width:50%;
-    margin-bottom:10px;
-    
-}
-
-h4{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-}
-
-p{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 155%;
-}
-
-
-
-/* footer bar */
-
-footer{
-    /* position: relative; */
-    width: 100%;
-    height:61px;;
-    background: hsl(18, 76%, 71%);
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* navigation bar */
-
-nav{
-    position: fixed;
-    width: 100%;
-    height: 61px;
-    background: #ED9D7B;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    top:0;
-}
-
-.undernav{
-    margin-top: 61px;;
-}
-nav ul{
-    width: 260px;
-    display: flex;
-    justify-content: space-between;
-}
+/* PROFILE SECTION*/
 .profile{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin-top: 5%;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:safe;
+    
 }
 
 .profile img{
-    width:50%;
-    height:auto;
-    margin-right: 60px;
-    margin-left: 10px;
-    margin-top: 20px;
-    padding-bottom: 75px;
+    float:left;
 }
-.profile h3{
-    padding-top: 15px;
-    font-size: 30px;
-    line-height: 40px;
-
+.myprofile{
+    margin:0 4em 0 5em; 
+    transition: all 0.5s ease;
 }
-.profile img:hover {
-    animation-name: anime;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
+.myprofile img{
+    width:85%;
+    height:30vh;
 }
-@keyframes anime {
-    100% {width:100%;
-    height:100%;}
-}
-ul{
-    gap: 20px;
-}
-
-input{
-    height:20px;
+.myprofile img{
     width: 250px;
-    background-color: #ED9D7B;
-    border-radius: 5px;
-    margin: 10px;
+    height: 250px;
+    border-radius: 50%;
+    cursor:pointer;
 }
-.textme{
+.myprofile img:hover{
+    transform: scale(1.1);
+}
+.profile p{
+margin-top: 0.5em;   
+width:40%;
+height:80%;
+line-height: 40px;
+font-size: 28px;
+}
+h1{
+    text-align: center;
+    margin:2em 0 2em 0;
+}
+/*ROLE MODELS*/
+.rolemodels{
+    display:flex;
+    width:100%;
+    height:auto;
+    justify-content: space-evenly;
+    margin:0em 0em 2em 0em;
+    align-items: center;
+
+}
+.rolemodels h2{
+    margin-top: 0.5em;
+}
+.rolemodel-1{
+    width:60%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-button{
-    height:20px;
-    width:100px;
-    border-radius: 10px;
-    margin: 10px;
-    
-}
-
-.rolemodels{
+.rolemodel-2{
+    width:60%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.box2{
+
+.rolemodel-1 img{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+
+}
+.rolemodel-2 img{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+
+}
+.rolemodel-1 h2{
     text-align: center;
 }
-.box2 img{
-    height:270px;
-    width:auto;
-}
-
-h2{
+.rolemodel-2 h2{
     text-align: center;
 }
-.textme h3{
-    margin: 10px;
+/* FOOTER*/
+footer{
+    text-align: center;
 }
-.nav-link{
-    transition: 0.7s ease;
-}
+@media screen and (max-width: 800px) {
+    *{
+        padding: 0;
+        margin:0;
+        text-decoration:none;
+        list-style:none;
+        box-sizing: border-box;
+        font-family: "Josefin Sans",sans-serif;
+    }
 
-li :hover{
-    color: yellow;
-
-}
-
-.hamburger{
-    display:none;
-    cursor: pointer;
-}
-.bar{
-    display: block;
-    width:25px;
-    height:3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: black;
-
-}
-
-@media screen and (max-width: 800px){
-    .hamburger{
-        display:block;
-    }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        top:61px;
-        gap: 0;
-        flex-direction: column ;
-        background-color: #ED9D7B;
-        width:100%;
-        text-align: center;
-        transition: 0.3s;
-
-    }
-    .nav-item{
-        margin:16px 0;
-    }
-    .nav-menu.active{
-        left: 0;
-    }
     body{
-        width: 100vw;
-        height:auto;
 
+        width:100%;
+        height:auto;
+        margin:0;padding:0;
+      background-image: url(../public/pexels-fwstudio-129731\ \(1\).jpg);
+      
+    }
+    .main{
+        width:100%;
+        height:auto;
+        padding:0em;
+        margin:2em 0em 2em 0em;
+        background:url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+        border-radius: 20px;
+        
+    }
+    /*NAVIGATION BAR*/
+    .navbar{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
 
     }
+    .navbar-items{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
 
-    nav{
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 61px;
-        background: #ED9D7B;
-        margin: 0 auto;
-        display: flex;
+    }
+    /*PROFILE*/
+    .profile{
+        margin-top: 5%;
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 0 0px;
-        /* z-index:1; */
+
+    }
+    .myprofile{
+        margin:0 auto; 
+        transition: all 0.5s ease;
+    }
+    .myprofile img{
+        border-radius: 50%;
+        cursor:pointer;
         
     }
-    
-    footer{
-        width: 100vw;
-        height: 61px;
-        background: hsl(18, 76%, 71%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .rolemodels{
-        display: block;
-        
-    }
-    .profile{
-        margin-top:61px;
-        display: flex;
-        flex-direction: column;
-    
-    }
-    
-    
-    .profile img{
-        width:100%;
-        height:auto;
-        margin: 0px;
-        padding: 0px;
-        
-    }
-    .profile h3{
-        padding-top: 2px;
-        line-height: 20px;
-        font-size: 15px;
-    
-    }
-    
-    .box2{
-        text-align: none;
-    }
-    h3{
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 15px;
-        margin: 0 ;
-    }
-    h2{
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 20px;
-    }
-    .box1 img{
-        width:100vw;
-        height:60vh;
- 
-    }
-     .box2 img{
-        width:100vw;
-        height:40vh;
-     }
-     .box1{
-         margin: 0px;
-     }
-.box2{
-    margin: 0px;
+    .profile p{
+        margin-top: 1em;   
+        width:80%;
+        height:80%;
+        line-height: 35px;
+        font-size: 28px;
+        }
+    /*ROLE MODELS*/
+.rolemodels{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:auto;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0em;
+
 }
-.box2{
-    text-align: center;
+.rolemodel-1{
+    margin-bottom: 2em;
 }
-.box1{
-    text-align: center;
+.rolemodel-1 img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+   
+
 }
-.profile h3{
-width: fit-content;
+.rolemodel-2 img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+
+}
+footer{
+    padding: 0%;
+    margin:0%;
 }
 
 }
