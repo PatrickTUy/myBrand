@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap');
+
+body{
+    width:100%;
+    height:auto;
+    margin:0;padding:0;
+    background:url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+  
+}
+
+*{
+    padding: 0;
+    margin:0;
+    text-decoration:none;
+    list-style:none;
+    box-sizing: border-box;
+    font-family: "Josefin Sans",sans-serif;
+}
+
+/*NAVIGATION BAR */
+.navbar{
+width:100%;
+display:flex;
+justify-content: space-around;
+font-family:cursive,sans-serif;
+align-items: center;
+}
+.navbar-items {
+    display:flex;
+    gap:20px;
+}
+.navbar h3 a {
+    font-family: "Allura",sans-serif;
+    font-size: 40px;
+    color: blue;
+}
+/* ABOUT SECTION */
+h1{ margin-top:2em;
+    text-align:center;
+}
+p{
+    margin:2em auto;
+    font-size: 36px;
+    line-height:40px;
+    width:80vw;
+}
+ul{
+    margin:2em 0em 2em 8em;
+    display:flex;
+    align-items: center;
+}
+ul li img{
+    width:50%;
+    margin-left: 1.5em;
+}
+.jsimage img{
+    width:140px;
+    margin-right:3em;
+}
+/* FOOTER */
+footer{
+    text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    /*NAVIGATION BAR*/
+    .navbar{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .navbar-items{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    ul{
+        margin:2em 0em;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul li img{
+        margin:1em 7em;
+        width:30%;
+    }
+    .jsimage img{
+        width:100px;
+        margin-right:10em;
+        
+    }
+}
