@@ -22,12 +22,13 @@
                 <h1>ADMIN</h1>
                 <h2>Log in</h2>
             </div>
-
-            <div class="box2">
-                <input type="email" placeholder="Type your e-mail...">
-                <input type="text" placeholder="enter password...">
-                <button>sign-in</button>
-            </div>
+            
+            <form class="box2">
+              <div id="error"></div>
+                <input class ="email"type="email" placeholder="Type your e-mail..." required>
+                <input class ="password"type="password" placeholder="enter password..." required>
+                <button class=" btn" type="submit"> log in</button>
+            </form>
     </div>
 
 
@@ -35,5 +36,6 @@
       <footer>
         COPYRIGHT 2022 © TYP • P.O. Box 92801 KIGALI GASABO 91109 • PRIVACY POLICY
       </footer>
+      <script src="../JS/login.js"></script>
 </body>
 </html>

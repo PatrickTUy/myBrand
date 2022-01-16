@@ -11,26 +11,26 @@
     <nav class="navbar">
         <h3><a href="../index.html">T Y P</a></h3>
         <ul class="navbar-items">
-          <li><a href="#">PORTFOLIO</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="../pages/portfolioB.html">PORTFOLIO</a></li>
+          <li><a href="../pages/aboutb.html">ABOUT</a></li>
+          <li><a href="../pages/blogb.html">BLOG</a></li>
+          <li><a href="../pages/contactb.html">CONTACT</a></li>
         </ul>
       </nav>
 
       <h1>DASHBOARD</h1>
             <h2>CREATE A NEW BLOG</h2>
             <div class="newblog">
-                  <div class="inputs">
-                      <input class="title"  type="text" placeholder="ENTER THE TITLE...">
-                      <input class="text" type="text" placeholder="ENTER THE TEXT...">
-                    <div class="image">
+                  <form action="#">
+                          <input id="thetitle" class="title"  type="text" name="full_title" placeholder="ENTER THE TITLE...">
+                          <input id="text" class="text" type="text" placeholder="ENTER THE TEXT...">
+                        <div class="image">
 
-                      <label for="">import image here:</label>
-                      <input class="photo" type="file" >
-                  </div>
-                  <button type="submit">post</button>
-                </div>
+                          <label for="">import image here:</label>
+                          <input id="photo" type="file" name="image">
+                      </div>
+                      <button  class="submit" type="submit">post</button>
+                </form>
           </div>
             
          
@@ -67,6 +67,7 @@
       <footer>
         COPYRIGHT 2022 © TYP • P.O. Box 92801 KIGALI GASABO 91109 • PRIVACY POLICY
       </footer>
+      <script src="../JS/dashboard.js"></script>
     
 </body>
 </html>

@@ -53,7 +53,7 @@ h1{
     height: 100%;
     align-items: center;
     }
-.box1{
+  form{
     width: 30%;
     height: fit-content;
     background: #462C2C;
@@ -121,7 +121,7 @@ footer{
         height: 100%;
         align-items: center;
         }
-        .box1{
+         form{
             width: 70%;
             height: auto;
             background: #462C2C;

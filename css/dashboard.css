@@ -47,7 +47,7 @@ h1,h2{
     align-items: center;
     margin:2em 0em;
 }
-.inputs{
+form{
     width:70%;
     height:100%;
     display: flex;
@@ -74,7 +74,7 @@ input.text{
 .image input{
     margin-left: 1em;
 }
-.inputs button{
+form button{
     width:15%;
     height:2vh;
     margin-top: 1em;
