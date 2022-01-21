@@ -7,7 +7,7 @@ blog.data.forEach((post) => {
   <img class="image-skeleton" src='${post.blogPhoto}' />
   <div class="blogContent" >
   <h3 style= "margin:0 0 1em 1em;">${post.title}</h3>
-  <p>${post.text}</p>
+  <p>${post.text.substring(0,50)}<a href="/pages/fullblog.html?id=${post.id}">...Read more</a> </p>
   <button class="delblog" style = "margin:0 1em;" > Delete</button>
   <button class="edblog">Edit</button>
   </div>

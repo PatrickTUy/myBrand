@@ -20,6 +20,7 @@
       </nav>
 
       <h1>DASHBOARD</h1>
+      
             <h2>CREATE A NEW BLOG</h2>
             <div class="newblog">
                   <form action="#">
@@ -34,31 +35,42 @@
                 </form>
           </div>
             
-         
-         <h2>DELETE AND UPDATE BLOG</h2>
-         <div class="flex">
-            <div class="articlesboxe1">
-                <img src="../public/pool.png" alt="pool">
-                <button >DELETE BLOG 1</button>
-                <button>UPDATE BLOG 1</button>
-            </div>
-            <div class="articlesboxe1">
-                <img src="../public/sports.png" alt="sports">
-                <button >DELETE BLOG 2</button>
-                <button >UPDATE BLOG 2</button>
-                </div>
-            <div class="articlesboxe1">
-                <img src="../public/readers.png" alt="readers">
-                <button>DELETE BLOG 3</button>
-                <button>UPDATE BLOG 3</button>
-            </div>
-            
+          <h2>CHANGE PROFILE</h2>
+          <div class="center">
+                  <label for="file">import new profile here:</label>
+                  <input type="file">
+                  <button type="submit" id="changeProfile" >Change profile</button>
+         </div>
+
+         <h2 style=' margin-bottom:2em;'>DELETE AND UPDATE BLOG</h2>
+         <div class="allblogs" id="blog-container">
+     
         </div>
+        <div id="edBlogContainer">
+          <form action="#" id="edBlog">
+            <div id="remove"><h1 id="cancel" style="color: red">X</h1></div>
+            <input
+              type="text"
+              name="idHolder"
+              id="hiddenId"
+              placeholder=" hidden id "
+            />
+    
+            Edit title:<br />
+            <input type="text" id="title" name="title" placeholder="" />
+    
+            Edit text:<br />
+            <textarea type="text" id="text" name="text"></textarea>
+    
+            <button type="submit" id="btn">edit</button>
+          </form>
+        </div>
+        
         <h2>ADD A NEW SKILL</h2>
         <div class="skill">
         <input class="green" type="text" placeholder="Type new skill">
-        <label for=""> import icon here: </label>
-        <input  type="file">
+        <label for="file"> import icon here: </label>
+        <input  type="file" class="file">
             
         </input>
         <button class="green" type="submit">Add skill</button>
