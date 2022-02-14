@@ -29,8 +29,8 @@ names.onkeydown = function(){
 };
 description.onkeydown = function(){
     descriptionlgth=description.value;
-    if(descriptionlgth.length < 8){
-        displayMessage.innerText = "MESSAGE SHOULD CONTAIN 8 CHARACTERS!"
+    if(descriptionlgth.length < 2){
+        displayMessage.innerText = "MESSAGE SHOULD CONTAIN ATLEAST 2 CHARACTERS!"
         displayMessage.style.color = 'yellow'
     }
     else{

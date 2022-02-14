@@ -60,7 +60,7 @@ h1 {
 }
 .blog div {
   max-width: 500px;
-  min-width: 300px;
+  min-width: 500px;
 }
 .blogContent {
   width: 100%;

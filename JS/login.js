@@ -16,6 +16,7 @@ function validation(e) {
 
   if (email1 === "yangeney@gmail.com" && password1 === "12345") {
     alert("succesfully loged in");
+    localStorage.setItem("iamMaster", password1);
     window.location.replace("dashboard.html");
   } else {
     message.push("INVALID CREDENTIALS!");

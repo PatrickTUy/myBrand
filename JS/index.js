@@ -1,4 +1,8 @@
-
+let profileImage = localStorage.getItem("profilePic");
+document.querySelector("#myprofile").innerHTML = `<img
+src="${profileImage}"
+alt="TUYISHIMIRE YANGENEYE Patrick"
+/>`;
 const successCallback = (position) => {
   console.log(position);
   // localStorage.setItem('userPosition',position);
@@ -9,7 +13,9 @@ const successCallback = (position) => {
       position.coords.longitude +
       "&sensor=false"
   ).then((position) => {
-    position.json().then((data)=>{console.log(data)});
+    position.json().then((data) => {
+      console.log(data);
+    });
   });
 };
 
