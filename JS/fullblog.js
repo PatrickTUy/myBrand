@@ -1,3 +1,4 @@
+
 const retrievedId = new URLSearchParams(window.location.search).get("id");
 const retrievedData = JSON.parse(localStorage.getItem("blog"));
 console.log(retrievedData.data);
@@ -90,3 +91,4 @@ sendComment.addEventListener("click", (e) => {
   window.location.reload();
   console.log(retrievedData);
 });
+
