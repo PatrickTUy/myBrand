@@ -1,28 +1,41 @@
-const email = document.querySelector(".email");
-
-const password = document.querySelector(".password");
-
-const button = document.querySelector(".btn").nodeValue;
 const errorElement = document.getElementById("error");
 errorElement.style.color = "red";
 errorElement.style.marginBottom = "1em";
-document.querySelector("form").addEventListener("submit", validation);
 
-function validation(e) {
+const form = document.querySelector("form");
+
+document.getElementById("login").addEventListener("submit", (e) => {
   e.preventDefault();
-  let message = [];
-  var email1 = email.value;
-  var password1 = password.value;
 
-  if (email1 === "yangeney@gmail.com" && password1 === "12345") {
-    alert("succesfully loged in");
-    localStorage.setItem("iamMaster", password1);
-    window.location.replace("dashboard.html");
-  } else {
-    message.push("INVALID CREDENTIALS!");
-    errorElement.innerText = message;
-    setTimeout(() => {
-      window.location.reload();
-    }, 3000);
-  }
-}
+  console.log(form);
+
+  const formData = new FormData(form);
+
+  let response = fetch(
+    "https://mynewbrandapi.herokuapp.com/api/v1/users/login/",
+    {
+      method: "POST",
+      body: formData,
+    }
+  )
+    .then((res) => {
+      return res.json();
+    })
+    .then((user) => {
+      console.log(user);
+      if (user.status == 200) {
+        let token = localStorage.setItem("token", user.accessToken);
+        window.location.replace("dashboard.html");
+      } else {
+        let errormessage = [];
+        errormessage.push("INVALID CREDENTIALS!");
+        errorElement.innerText = errormessage;
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});

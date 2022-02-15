@@ -18,9 +18,9 @@ const getArticles = () => {
               <p>${article.content.substring(
                 0,
                 50
-              )}<a href="/pages/fullblog.html?id=${
+              )}<a href='/pages/fullblog.html?id=${
           article.id
-        }" id ="wholeblog">...Read more</a> </p>
+        }'id ="wholeblog">...Read more</a> </p>
           </div>
         </div>
 

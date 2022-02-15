@@ -3,43 +3,68 @@ if (localStorage.getItem("iamMaster") == "12345") {
   logoutContainer.innerHTML = `<button class="styleLogout"'onclick="localStorage.setItem('iamMaster', '');window.location.reload()" >LOG OUT</button>`;
   let navBar = document.querySelector(".navbar");
   navBar.appendChild(logoutContainer);
-  document.querySelector("form").addEventListener("submit", function (e) {
+  // document.querySelector("form").addEventListener("submit", function (e) {
+  //   e.preventDefault();
+  //   const title = document.getElementById("thetitle").value;
+  //   const text = document.getElementById("text").value;
+  //   const blogPhoto = localStorage.getItem("recent-image");
+  //   if (title.length < 5 || text.length < 8) {
+  //     alert(
+  //       "your title and text should be atleast 5 and 8 characters respectively"
+  //     );
+  //   } else {
+  //     if (localStorage.getItem("blog")) {
+  //       let blog = JSON.parse(localStorage.getItem("blog"));
+  //       blog.lastCount += 1;
+  //       blog.data.push({
+  //         id: blog.lastCount,
+  //         blogPhoto: blogPhoto,
+  //         title: title,
+  //         text: text,
+  //         comments: [],
+  //       });
+  //       localStorage.setItem("blog", JSON.stringify(blog));
+  //     } else {
+  //       let blog = {};
+  //       blog.lastCount = 0;
+  //       blog.data = [
+  //         {
+  //           id: blog.lastCount,
+  //           blogPhoto: blogPhoto,
+  //           title: title,
+  //           text: text,
+  //           comments: [],
+  //         },
+  //       ];
+  //       localStorage.setItem("blog", JSON.stringify(blog));
+  //     }
+  //     window.location.replace("blogb.html");
+  //   }
+  // });
+  let retrievedToken = localStorage.getItem("token");
+  const createBlog = document.getElementById("createBlog");
+  createBlog.addEventListener("submit", (e) => {
     e.preventDefault();
-    const title = document.getElementById("thetitle").value;
-    const text = document.getElementById("text").value;
-    const blogPhoto = localStorage.getItem("recent-image");
-    if (title.length < 5 || text.length < 8) {
-      alert(
-        "your title and text should be atleast 5 and 8 characters respectively"
-      );
-    } else {
-      if (localStorage.getItem("blog")) {
-        let blog = JSON.parse(localStorage.getItem("blog"));
-        blog.lastCount += 1;
-        blog.data.push({
-          id: blog.lastCount,
-          blogPhoto: blogPhoto,
-          title: title,
-          text: text,
-          comments: [],
-        });
-        localStorage.setItem("blog", JSON.stringify(blog));
-      } else {
-        let blog = {};
-        blog.lastCount = 0;
-        blog.data = [
-          {
-            id: blog.lastCount,
-            blogPhoto: blogPhoto,
-            title: title,
-            text: text,
-            comments: [],
-          },
-        ];
-        localStorage.setItem("blog", JSON.stringify(blog));
+    const formData = new FormData(createBlog);
+    let response = fetch(
+      "https://mynewbrandapi.herokuapp.com/api/v1/articles",
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          Authorization: `token ${retrievedToken}`,
+        },
       }
-      window.location.replace("blogb.html");
-    }
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((article) => {
+        console.log(article);
+        if (article.status == 200) {
+          window.location.replace("blogb.html");
+        }
+      });
   });
 
   document.querySelector("#photo").addEventListener("change", function () {
