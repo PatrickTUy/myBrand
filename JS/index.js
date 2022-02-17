@@ -1,3 +1,4 @@
+
 let profileImage = localStorage.getItem("profilePic");
 document.querySelector("#myprofile").innerHTML = `<img
 src="${profileImage}"
@@ -23,3 +24,5 @@ const errorCallback = (error) => {
   console.error(error);
 };
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+
