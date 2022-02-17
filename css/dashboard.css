@@ -206,7 +206,7 @@ button.delBlog {
 }
 #edBlog {
   width: 60%;
-  height: 40%;
+  height: 50%;
   background: white;
   border-radius: 10px;
   display: flex;
@@ -235,15 +235,18 @@ label {
   margin: 10px auto;
   padding: 5px;
 }
-#text {
+#texte {
   width: 80%;
   height: 100px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 0.5px solid black;
   margin: 10px auto;
   padding: 5px;
 }
 #hiddenId {
+  display: none;
+}
+.hiddenId {
   display: none;
 }
 #edBlogContainer button {
@@ -273,12 +276,12 @@ label {
   margin: 0 auto;
   border-radius: 10px;
 }
-.styleLogout{
+.styleLogout {
   background-color: skyblue;
   border-radius: 10px;
-  width:8em;
-  height:2em;
-  cursor:pointer;
+  width: 8em;
+  height: 2em;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {

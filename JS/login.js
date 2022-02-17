@@ -19,6 +19,7 @@ document.getElementById("login").addEventListener("submit", (e) => {
     }
   )
     .then((res) => {
+      console.log(res.json);
       return res.json();
     })
     .then((user) => {
