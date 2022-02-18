@@ -1,174 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap");
 
-body{
-    width:100%;
-    height:auto;
-    margin:0;padding:0;
-    background:url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
-  
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
 }
 
-*{
-    padding: 0;
-    margin:0;
-    text-decoration:none;
-    list-style:none;
-    box-sizing: border-box;
-    font-family: "Josefin Sans",sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /*NAVIGATION BAR */
-.navbar{
-width:100%;
-display:flex;
-justify-content: space-around;
-font-family:cursive,sans-serif;
-align-items: center;
-margin-bottom: 2em;
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-family: cursive, sans-serif;
+  align-items: center;
+  margin-bottom: 2em;
 }
 .navbar-items {
-    display:flex;
-    gap:20px;
+  display: flex;
+  gap: 20px;
 }
 .navbar h3 a {
-    font-family: "Allura",sans-serif;
-    font-size: 40px;
-    color: blue;
+  font-family: "Allura", sans-serif;
+  font-size: 40px;
+  color: blue;
 }
-h1{
-    text-align:center;
-    margin-bottom: 1em;;
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
 }
-.contacts{
-    display:flex;
-    align-items: center;
-    gap: 1em;
-    margin-left:4em;
-    margin-bottom: 4em;;
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-left: 4em;
+  margin-bottom: 4em;
 }
-.body{
-    margin-top:8%;
-    display: flex;
-    justify-content: space-evenly;
-    height: 100%;
-    align-items: center;
-    }
-
-  form{
-    width: 80%;
-
-    height: fit-content;
-    background: #462C2C;
-    align-items: center;
-    text-align: center;
-    border-radius: 40px;
-    
-    }
-
-.email{
-    border-radius: 34px;
-    height: 3em;
-    margin: 3%;
-    text-align: center;
-
+.body {
+  margin-top: 8%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
 }
 
-.names{
+form {
+  width: 80%;
 
-    border-radius: 34px; 
-    height: 3em;
-    margin: 3%;
-    text-align: center;
-    
-}
-.description{
-    border-radius: 40px;
-    width:80%;
-    height: 30vh;
-    margin: 3%;
-    text-align: center;
+  height: fit-content;
+  background: #462c2c;
+  align-items: center;
+  text-align: center;
+  border-radius: 40px;
 }
 
-.column{
-    width:fit-content;
-    height:fit-content;
-    margin-left: 2em;
+.email {
+  width: 70%;
+  border-radius: 10px;
+  height: 3em;
+  margin: 3%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.names {
+  width: 70%;
+  border-radius: 10px;
+  height: 3em;
+  margin: 3%;
+  text-align: center;
+  font-size: 20px;
+}
+.description {
+  margin-top: 10em;
+  border-radius: 10px;
+  width: 90%;
+  height: 15vh;
+  margin: 3%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.column {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 2em;
+  background: #5f6de7;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+footer {
+  width: 100%;
+  margin-top: 3em;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  /*NAVIGATION BAR*/
+  .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .navbar-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .body {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+  }
 
-}
+  form {
+    width: 70%;
+    height: auto;
+    /* background: #462C2C; */
 
-button{
-    border-radius: 10px;
-    height: 2.5em;
-    background: #5F6DE7;
-    margin-top: 2em;
-    margin-bottom: 5px;
-}
-footer{
-    width:100%;
-    margin-top: 3em;
+    align-items: center;
     text-align: center;
+    border-radius: 40px;
+  }
+  .contacts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 0px;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .contacts h2 {
+    font-size: 20px;
+  }
 }
-
-
-
-@media screen and (max-width: 800px) {
-    /*NAVIGATION BAR*/
-    .navbar{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .navbar-items{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .body{
-        margin-top:8%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100%;
-        align-items: center;
-        }
-
-         form{
-            width: 70%;
-            height: auto;
-            /* background: #462C2C; */
-
-            align-items: center;
-            text-align: center;
-            border-radius: 40px;
-            
-            }
-         .contacts{
-             width:100%;
-            display:flex;
-            align-items: center;
-            gap: 1em;
-            margin:0px;
-            }
-
-            h1{
-                font-size: 28px;
-                text-align:center;
-                margin-bottom: 2em;;
-            }
-            .contacts h2{
-                font-size: 20px;
-            }
-
-}
-@media screen and (max-width:280px) {
-    
-        .contacts h2{
-            font-size: 16px;
-        }
-    
+@media screen and (max-width: 280px) {
+  .contacts h2 {
+    font-size: 16px;
+  }
 }

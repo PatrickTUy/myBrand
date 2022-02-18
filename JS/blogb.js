@@ -16,12 +16,12 @@ const getArticles = () => {
           <div class = 'blogContent'>
               <h3 class = 'hiddenId' > ${article._id}</h3>
               <h3 style= "margin:0 0 1em 1em;">${article.title}</h3>
-              <p>${article.content.substring(
+              <p >${article.content.substring(
                 0,
-                50
-              )}<div style= "cursor:pointer;"class ="wholeblog"><a href="/pages/fullblog.html?id=${
+                90
+              )}<a href="/pages/fullblog.html?id=${
           article._id
-        }" >...Read more</a></div> </p>
+        }" style= "cursor:pointer;"class ="wholeblog" >...Read more</a> </p>
           </div>
         </div>
 

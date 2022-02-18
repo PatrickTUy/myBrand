@@ -155,7 +155,7 @@ const getArticles = () => {
                   <p>${article.content.substring(
                     0,
                     50
-                  )}<div style= "cursor:pointer;"class ="wholeblog"><button class = "deleteBLog"style = 'margin:1em;' >Delete</button><button class = "editBlog" >Update</button></div> </p>
+                  )}<div class ="wholeblog"><button class = "deleteBLog"style = 'margin:1em; cursor:pointer' >Delete</button><button class = "editBlog" style = 'cursor:pointer;'>Update</button></div> </p>
               </div>
             </div>
     
@@ -168,24 +168,25 @@ const getArticles = () => {
       for (let i = 0; i < deleteBLog.length; i++) {
         deleteBLog[i].addEventListener("click", (e) => {
           const id = e.target.parentElement.parentElement.children[0].innerHTML;
-          console.log(id);
-          let response = fetch(
-            `https://mynewbrandapi.herokuapp.com/api/v1/articles/${id}  `,
-            {
-              method: "DELETE",
-              headers: {
-                Authorization: `token ${retrievedToken}`,
-              },
-            }
-          )
-            .then((res) => {
-              console.log(res);
-              return res.json();
-            })
-            .then((deleted) => {
-              console.log(deleted);
-              window.location.reload();
-            });
+          if (confirm("are you sure you want to delete?")) {
+            let response = fetch(
+              `https://mynewbrandapi.herokuapp.com/api/v1/articles/${id}  `,
+              {
+                method: "DELETE",
+                headers: {
+                  Authorization: `token ${retrievedToken}`,
+                },
+              }
+            )
+              .then((res) => {
+                console.log(res);
+                return res.json();
+              })
+              .then((deleted) => {
+                console.log(deleted);
+                window.location.reload();
+              });
+          }
         });
       }
 
@@ -198,6 +199,8 @@ const getArticles = () => {
 
           let edBlog = document.getElementById("edBlogContainer");
           edBlog.style.display = "flex";
+          const hideUpdate = document.getElementById("updateUser");
+          hideUpdate.style.display = "none";
           let title = document.getElementById("title");
           title.value =
             editBlog[i].parentElement.parentElement.children[1].innerHTML;
@@ -236,24 +239,6 @@ const getArticles = () => {
                 console.log(error);
               });
           });
-
-          // let response = fetch(
-          //   `https://mynewbrandapi.herokuapp.com/api/v1/articles/${id}  `,
-          //   {
-          //     method: "PATCH",
-          //     headers: {
-          //       Authorization: `token ${retrievedToken}`,
-          //     },
-          //   }
-          // )
-          //   .then((res) => {
-          //     console.log(res);
-          //     return res.json();
-          //   })
-          //   .then((deleted) => {
-          //     console.log(deleted);
-          //     window.location.reload();
-          //   });
         });
       }
     })
@@ -262,32 +247,21 @@ const getArticles = () => {
 
 getArticles();
 
-let edBlog = document.getElementById("edBlogContainer");
-
-document.querySelectorAll(".editBlog").forEach((edblogbtn) => {
-  edblogbtn.addEventListener("click", (e) => {
-    console.log(e);
-    e.preventDefault();
-    edBlog.style.display = "flex";
-    let id = e.parentElement;
-  });
+const logout = document.getElementById("logout");
+logout.addEventListener("click", (e) => {
+  localStorage.setItem("token", "");
+  window.location.replace("/pages/login.html");
 });
 
-const updateBLog = () => {
-  let response = fetch(
-    `https://mynewbrandapi.herokuapp.com/api/v1/articles/${article._id}`,
-    {
-      method: "PATCH",
-      headers: {
-        Authorization: `token ${retrievedToken}`,
-      },
-    }
-  )
-    .then((res) => {
-      return res.json();
-    })
-    .then((updated) => {
-      console.log(updated);
-      window.location.reload();
-    });
-};
+const form = document.querySelector("#updateUser");
+const displayUser = document.getElementById("displayUser");
+displayUser.addEventListener("click", (e) => {
+  console.log(e);
+  e.preventDefault();
+  let updateUser = document.getElementById("updateUser");
+  let edBlog = document.getElementById("edBlogContainer");
+  let ediBlog = document.getElementById("edBlog");
+  edBlog.style.display = "flex";
+  ediBlog.style.display = "none";
+  updateUser.style.display = "inline";
+});

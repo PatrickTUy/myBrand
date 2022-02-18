@@ -16,6 +16,7 @@
         <li><a href="../pages/blogb.html">BLOG</a></li>
         <li><a href="../pages/contactb.html">CONTACT</a></li>
         <li><a href="../pages/queries.html">QUERIES</a></li>
+        <button type="button" id="logout">LOGOUT</button>
       </ul>
     </nav>
 
@@ -42,20 +43,51 @@
           <label for="">import image here:</label>
           <input id="photo" type="file" name="image" />
         </div>
-        <button class="submit" type="submit">post</button>
+        <button class="submit" type="submit">POST</button>
       </form>
     </div>
+    <div id="alignCenter">
+      <h2>UPDATE USER</h2>
 
-    <h2>CHANGE PROFILE</h2>
-    <form class="center" id="profileForm">
-      <label for="file">import new profile here:</label>
-      <input type="file" name="profile" />
-      <button type="submit">Change profile</button>
-    </form>
+      <!-- <form id="updateUser">
+      CHANGE EMAIL:<br />
+      <input type="text" id="email" name="email" placeholder="" />
+
+      CHANGE PASSWORD:<br />
+
+      <input type="text" id="password" name="password" placeholder="" />
+
+      <label for="file"> CHANGE PHOTO: </label>
+      <input type="file" id="updatephoto" name="image" />
+
+      <button type="submit" id="btnUpdate">UPDATE</button>
+    </form> -->
+      <form class="center" id="profileForm">
+        <button type="submit" id="displayUser">UPDATE USER</button>
+      </form>
+    </div>
 
     <h2 style="margin-bottom: 2em">DELETE AND UPDATE BLOG</h2>
     <div class="allblogs" id="allblogs-container"></div>
     <div id="edBlogContainer">
+      <!-- <form id="updateUser">
+        <div id="removeProcess">
+          <h1 id="cancelProcess" style="color: red">X</h1>
+        </div>
+
+        CHANGE EMAIL:<br />
+        <input type="text" id="email" name="email" placeholder="" />
+
+        CHANGE PASSWORD:<br />
+
+        <input type="text" id="password" name="password" placeholder="" />
+
+        <label for="file"> CHANGE PHOTO: </label>
+        <input type="file" id="updatephoto" name="image" />
+
+        <button type="submit" id="btnUpdate">UPDATE</button>
+      </form> -->
+
       <form id="edBlog">
         <div id="remove"><h1 id="cancel" style="color: red">X</h1></div>
         <input
@@ -75,7 +107,7 @@
         <label for="file"> CHOOSE PHOTO: </label>
         <input type="file" id="updatephoto" name="image" />
 
-        <button type="submit" id="btn">edit</button>
+        <button type="submit" id="btn">EDIT</button>
       </form>
     </div>
 

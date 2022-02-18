@@ -19,7 +19,7 @@ const getOneArticle = () => {
       const div = document.createElement("div");
       let html = `<img src="${article.data.image}" alt="" />
          <h2 style='margin-bottom:1em;'> ${article.data.title} </h2>
-         <p style=' width:80%;'>${article.data.content}</p>
+         <p>${article.data.content}</p>
          `;
 
       div.innerHTML = html;
@@ -44,10 +44,13 @@ const getComments = () => {
     .then((comments) => {
       console.log(comments);
       comments.data.map((comment) => {
+        let date = "";
+        date = comment.create_at.split("T");
+        let finalDate = `${date[0]}`;
         let html1 = "";
         html1 += `<div class='divComment'>
-                          <h4>${comment.name}</h4>
-                          <h4 style='margin-bottom:0.5em;'>posted on:${comment.create_at}</h4>
+                          <h4>NAME:${comment.name}</h4>
+                          <h4 style='margin-bottom:0.5em;'>posted on:${finalDate}</h4>
                           <h4>${comment.comment}</h4>
                    </div>`;
 
