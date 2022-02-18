@@ -199,8 +199,6 @@ const getArticles = () => {
 
           let edBlog = document.getElementById("edBlogContainer");
           edBlog.style.display = "flex";
-          const hideUpdate = document.getElementById("updateUser");
-          hideUpdate.style.display = "none";
           let title = document.getElementById("title");
           title.value =
             editBlog[i].parentElement.parentElement.children[1].innerHTML;
@@ -251,17 +249,4 @@ const logout = document.getElementById("logout");
 logout.addEventListener("click", (e) => {
   localStorage.setItem("token", "");
   window.location.replace("/pages/login.html");
-});
-
-const form = document.querySelector("#updateUser");
-const displayUser = document.getElementById("displayUser");
-displayUser.addEventListener("click", (e) => {
-  console.log(e);
-  e.preventDefault();
-  let updateUser = document.getElementById("updateUser");
-  let edBlog = document.getElementById("edBlogContainer");
-  let ediBlog = document.getElementById("edBlog");
-  edBlog.style.display = "flex";
-  ediBlog.style.display = "none";
-  updateUser.style.display = "inline";
 });
