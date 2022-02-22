@@ -1,195 +1,425 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&family=Poppins:wght@400;700&display=swap");
 
-body{
-    width:100vw;
-    height:auto;
-    margin:0;padding:0;
-    background-image: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
-  
+body {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
 }
 
-*{
-    padding: 0;
-    margin:0;
-    text-decoration:none;
-    list-style:none;
-    box-sizing: border-box;
-    font-family: "Josefin Sans",sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /*NAVIGATION BAR */
-.navbar{
-width:100vw;
-display:flex;
-justify-content: space-around;
-font-family:cursive,sans-serif;
-align-items: center;
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  font-family: cursive, sans-serif;
+  align-items: center;
 }
 .navbar-items {
-    display:flex;
-    gap:20px;
+  display: flex;
+  gap: 20px;
+}
+#logout {
+  background-color: blueviolet;
+  color: white;
+  height: 2em;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .navbar h3 a {
-    font-family: "Allura",sans-serif;
-    font-size: 40px;
-    color: blue;
+  font-family: "Allura", sans-serif;
+  font-size: 40px;
+  color: blue;
 }
 /* DASHBOARD SECTION */
-h1,h2{
-    text-align: center;
-    margin-top: 1em;
+h1,
+h2 {
+  text-align: center;
+  margin-top: 1em;
 }
-.newblog{
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    height:100%;
-    align-items: center;
-    margin:2em 0em;
+.newblog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: 2em 0em;
 }
-.inputs{
-    width:70%;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+form {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-input.title{
-    width:50%;
-    height:5vh;
-    margin-bottom:1em;
-    border-radius: 5px;
+input.title {
+  width: 50%;
+  height: 5vh;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  padding-left: 1em;
+  font-size: 20px;
 }
-input.text{
-    width:75%;
-    height:20vh;
-    margin-bottom:1em;
+input.text {
+  width: 75%;
+  height: 20vh;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.image {
+  display: flex;
+  align-items: center;
+}
+.image input {
+  margin-left: 1em;
+}
+form button {
+  width: 6em;
+  height: 3vh;
+  margin-top: 1em;
+  border-radius: 15px;
+  background: blueviolet;
+  font-size: 20px;
+  color: white;
+}
+#edBlog button {
+  width: 6em;
+  height: 4vh;
+  margin-top: 1em;
+  border-radius: 20px;
+  background: skyblue;
+  font-size: 20px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+img {
+  margin: 2em;
+  width: 500px;
+  height: 400px;
+}
+.articlesboxe1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  width: fit-content;
+  height: auto;
+  margin: 3em auto;
+}
+.articlesboxe1 button {
+  margin-bottom: 3em;
+  cursor: pointer;
+}
+.skill {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 2em;
+}
+.skill label,
+.file {
+  margin-top: 1em;
+}
 
-    border-radius: 5px;
+input.green {
+  margin-top: 2em;
+  width: 20%;
+  height: 6vh;
+  margin-right: 0.5em;
+  padding-left: 1em;
 }
-.image{
-    display: flex;
-    align-items: center;
+button.green {
+  margin-top: 2em;
+  width: 12%;
+  height: fit-content;
 }
-.image input{
-    margin-left: 1em;
+.center {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  margin-top: 2em;
 }
-.inputs button{
-    width:15%;
-    height:2vh;
-    margin-top: 1em;
+.center input {
+  margin-left: 1em;
 }
-.flex{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.center button {
+  width: 8em;
+  height: 3vh;
+  border-radius: 3px;
+  background: blueviolet;
 }
-img{
-    margin:2em;
-    width:500px;
-    height:400px;
-}
-.articlesboxe1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border:1px solid black;
-    width:fit-content;
-    height:auto;
-    margin: 3em auto;
-}
-.articlesboxe1 button{
-    margin-bottom: 3em;
-    cursor: pointer;
-}
-.skill{
-    display:flex;
-    flex-direction: row;
-    margin:0 auto;
-    align-items: center;
-    width: fit-content;
-    margin-bottom:2em;
 
+.deleteBLog {
+  width: 5em;
+  color: white;
+  background-color: blueviolet;
 }
-input.green{
-    margin-top: 2em;
-    width:20%;
-    height:6vh;
-    margin-right:0.5em;
+.editBlog {
+  width: 5em;
+  color: white;
+  background-color: blueviolet;
+}
+form #profileForm {
+  margin: 0 auto;
+  padding-left: 10em;
+}
 
-    
+form #updateUser {
+  margin-top: 1em;
+  display: inline-block;
+  width: 60%;
+  height: 50%;
+  background: white;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
 }
-button.green{
-    margin-top: 2em;
-    width:12%;
-    height:fit-content;
+form #email {
+  width: 40%;
+  height: 5vh;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  padding-left: 1em;
+  font-size: 20px;
 }
+form #password {
+  width: 40%;
+  height: 5vh;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  padding-left: 1em;
+  font-size: 20px;
+}
+#removeProcess {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+#removeProcess h1 {
+  display: inline;
+  padding: 8px 10px 0 0;
+
+  cursor: pointer;
+  margin: 0;
+}
+#btnUpdate {
+  height: 2em;
+  text-align: center;
+}
+#alignCenter {
+  align-items: center;
+  margin: 1em auto;
+}
+
 /* FOOTER */
-footer{
-    text-align: center;
+footer {
+  text-align: center;
+}
+/*codes to be filtered*/
+h1 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.allblogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.blog {
+  display: flex;
+  margin-bottom: 2em;
+  justify-content: space-evenly;
+}
+.blog div {
+  max-width: 500px;
+  min-width: 500px;
+}
+.blogContent {
+  width: 100%;
+  height: auto;
 }
 
+.blogContent p {
+  width: 100%;
+  font-size: medium;
+  line-height: 15px;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+img {
+  width: 370px;
+  height: 380px;
+}
+button.delBlog {
+  margin: 10em;
+}
+#edBlogContainer {
+  width: 500px;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  position: fixed !important;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  z-index: 1000;
+}
+#edBlog {
+  width: 60%;
+  height: 50%;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#flexTitle {
+  display: flex;
+  margin: 1em;
+  align-items: center;
+}
 
+#flexText {
+  display: flex;
+  margin: 1em;
+  align-items: center;
+}
+label {
+  font-size: large;
+}
+#title {
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 5px;
+}
+#texte {
+  width: 80%;
+  height: 100px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  margin: 10px auto;
+  padding: 5px;
+}
+#hiddenId {
+  display: none;
+}
+.hiddenId {
+  display: none;
+}
+#edBlogContainer button {
+  border-radius: 5px;
+  margin: 20px 20px;
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  padding: 10px 40px;
+  color: black;
+}
+#remove {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+#remove h1 {
+  display: inline;
+  padding: 8px 10px 0 0;
+  /* text-align: end; */
+  cursor: pointer;
+  margin: 0;
+}
+.editTitle,
+.editText {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.styleLogout {
+  background-color: skyblue;
+  border-radius: 10px;
+  width: 8em;
+  height: 2em;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 800px) {
-    /*NAVIGATION BAR*/
-    .navbar{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
+  /*NAVIGATION BAR*/
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .articlesboxe1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: fit-content;
+    height: auto;
+    margin: 3em 2em;
+  }
+  /* DASHBOARD */
+  .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    }
-    .navbar-items{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
+  img {
+    margin: 2em;
+    width: 60%;
+    height: 40vh;
+  }
 
-    }
-    .articlesboxe1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid black;
-        width:fit-content;
-        height:auto;
-        margin: 3em 2em;
-    }
-    /* DASHBOARD */
-    .image{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    img{
-        margin:2em;
-        width:60%;
-        height:40vh;
-    }
-
-    .skill{
-        display:flex;
-        flex-direction: row;
-        margin:0 auto;
-        align-items: center;
-        width: 100%;
-        margin-bottom:2em;
-    
-    }
-    input.green{
-        margin-top: 2em;
-        width:100%;
-        height:6vh;
-        margin-right:0.5em;
-    
-        
-    }
-    button.green{
-        margin-top: 2em;
-        width:40%;
-        height:fit-content;
-        
-    
-    }
+  .skill {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  input.green {
+    margin-top: 2em;
+    width: 100%;
+    height: 6vh;
+    margin-right: 0.5em;
+  }
+  button.green {
+    margin-top: 2em;
+    width: 40%;
+    height: fit-content;
+  }
 }

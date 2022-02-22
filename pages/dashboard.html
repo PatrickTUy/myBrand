@@ -1,72 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DASHBOARD</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <h3><a href="../index.html">T Y P</a></h3>
-        <ul class="navbar-items">
-          <li><a href="#">PORTFOLIO</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
-      </nav>
+      <h3><a href="../index.html">T Y P</a></h3>
+      <ul class="navbar-items">
+        <li><a href="../pages/portfolioB.html">PORTFOLIO</a></li>
+        <li><a href="../pages/aboutb.html">ABOUT</a></li>
+        <li><a href="../pages/blogb.html">BLOG</a></li>
+        <li><a href="../pages/contactb.html">CONTACT</a></li>
+        <li><a href="../pages/queries.html">QUERIES</a></li>
+        <button type="button" id="logout">LOGOUT</button>
+      </ul>
+    </nav>
 
-      <h1>DASHBOARD</h1>
-            <h2>CREATE A NEW BLOG</h2>
-            <div class="newblog">
-                  <div class="inputs">
-                      <input class="title"  type="text" placeholder="ENTER THE TITLE...">
-                      <input class="text" type="text" placeholder="ENTER THE TEXT...">
-                    <div class="image">
+    <h1>DASHBOARD</h1>
 
-                      <label for="">import image here:</label>
-                      <input class="photo" type="file" >
-                  </div>
-                  <button type="submit">post</button>
-                </div>
-          </div>
-            
-         
-         <h2>DELETE AND UPDATE BLOG</h2>
-         <div class="flex">
-            <div class="articlesboxe1">
-                <img src="../public/pool.png" alt="pool">
-                <button >DELETE BLOG 1</button>
-                <button>UPDATE BLOG 1</button>
-            </div>
-            <div class="articlesboxe1">
-                <img src="../public/sports.png" alt="sports">
-                <button >DELETE BLOG 2</button>
-                <button >UPDATE BLOG 2</button>
-                </div>
-            <div class="articlesboxe1">
-                <img src="../public/readers.png" alt="readers">
-                <button>DELETE BLOG 3</button>
-                <button>UPDATE BLOG 3</button>
-            </div>
-            
+    <h2>CREATE A NEW BLOG</h2>
+    <div class="newblog">
+      <form action="#" id="createBlog">
+        <input
+          id="thetitle"
+          class="title"
+          type="text"
+          name="title"
+          placeholder="ENTER THE TITLE..."
+        />
+        <input
+          id="text"
+          class="text"
+          type="text"
+          name="content"
+          placeholder="ENTER THE TEXT..."
+        />
+        <div class="image">
+          <label for="">import image here:</label>
+          <input id="photo" type="file" name="image" />
         </div>
-        <h2>ADD A NEW SKILL</h2>
-        <div class="skill">
-        <input class="green" type="text" placeholder="Type new skill">
-        <label for=""> import icon here: </label>
-        <input  type="file">
-            
-        </input>
-        <button class="green" type="submit">Add skill</button>
+        <button class="submit" type="submit">POST</button>
+      </form>
+    </div>
+    <div id="alignCenter">
+      <h2>UPDATE USER</h2>
+
+      <!-- <form id="updateUser">
+      CHANGE EMAIL:<br />
+      <input type="text" id="email" name="email" placeholder="" />
+
+      CHANGE PASSWORD:<br />
+
+      <input type="text" id="password" name="password" placeholder="" />
+
+      <label for="file"> CHANGE PHOTO: </label>
+      <input type="file" id="updatephoto" name="image" />
+
+      <button type="submit" id="btnUpdate">UPDATE</button>
+    </form> -->
+      <form class="center" id="profileForm">
+        <button type="submit" id="displayUser">UPDATE USER</button>
+      </form>
+    </div>
+
+    <h2 style="margin-bottom: 2em">DELETE AND UPDATE BLOG</h2>
+    <div class="allblogs" id="allblogs-container"></div>
+    <div id="edBlogContainer">
+      <!-- <form id="updateUser">
+        <div id="removeProcess">
+          <h1 id="cancelProcess" style="color: red">X</h1>
         </div>
 
-      
-      <footer>
-        COPYRIGHT 2022 © TYP • P.O. Box 92801 KIGALI GASABO 91109 • PRIVACY POLICY
-      </footer>
-    
-</body>
+        CHANGE EMAIL:<br />
+        <input type="text" id="email" name="email" placeholder="" />
+
+        CHANGE PASSWORD:<br />
+
+        <input type="text" id="password" name="password" placeholder="" />
+
+        <label for="file"> CHANGE PHOTO: </label>
+        <input type="file" id="updatephoto" name="image" />
+
+        <button type="submit" id="btnUpdate">UPDATE</button>
+      </form> -->
+
+      <form id="edBlog">
+        <div id="remove"><h1 id="cancel" style="color: red">X</h1></div>
+        <input
+          type="text"
+          name="idHolder"
+          id="hiddenId"
+          placeholder=" hidden id "
+        />
+
+        EDIT TITLE:<br />
+        <input type="text" id="title" name="title" placeholder="" />
+
+        EDIT TEXT:<br />
+
+        <input type="text" id="texte" name="content" placeholder="" />
+
+        <label for="file"> CHOOSE PHOTO: </label>
+        <input type="file" id="updatephoto" name="image" />
+
+        <button type="submit" id="btn">EDIT</button>
+      </form>
+    </div>
+
+    <footer>
+      COPYRIGHT 2022 © TYP • P.O. Box 92801 KIGALI GASABO 91109 • PRIVACY POLICY
+    </footer>
+    <script src="../JS/dashboard.js"></script>
+  </body>
 </html>

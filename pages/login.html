@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
-    <link rel="stylesheet" href="../css/login.css">
-</head>
-<body>
-    <nav class="navbar">
-        <h3><a href="../index.html">T Y P</a> </h3>
-        <ul class="navbar-items">
-          <li><a href="../pages/portfolioB.html">PORTFOLIO</a></li>
-          <li><a href="../pages/aboutb.html">ABOUT</a></li>
-          <li><a href="../pages/blogb.html">BLOG</a></li>
-          <li><a href="../pages/contactb.html">CONTACT</a></li>
-        </ul>
-      </nav>
-      <div class="body">
-            <div class="box1">
-                <h1>ADMIN</h1>
-                <h2>Log in</h2>
-            </div>
 
-            <div class="box2">
-                <input type="email" placeholder="Type your e-mail...">
-                <input type="text" placeholder="enter password...">
-                <button>sign-in</button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h3><a href="../index.html">T Y P</a></h3>
+      <ul class="navbar-items">
+        <li><a href="../pages/portfolioB.html">PORTFOLIO</a></li>
+        <li><a href="../pages/aboutb.html">ABOUT</a></li>
+        <li><a href="../pages/blogb.html">BLOG</a></li>
+        <li><a href="../pages/contactb.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="body">
+      <div class="box1">
+        <h1>ADMIN</h1>
+        <h2>Log in</h2>
+      </div>
+
+      <form class="box2" id="login">
+        <div id="error"></div>
+        <input
+          name="email"
+          class="email"
+          type="email"
+          placeholder="Type your e-mail..."
+          required
+        />
+        <input
+          name="password"
+          class="password"
+          type="password"
+          placeholder="enter password..."
+          required
+        />
+        <button class="btn" type="submit">log in</button>
+      </form>
     </div>
 
-
-      
-      <footer>
-        COPYRIGHT 2022 © TYP • P.O. Box 92801 KIGALI GASABO 91109 • PRIVACY POLICY
-      </footer>
-</body>
+    <footer>
+      COPYRIGHT 2022 © TYP • P.O. Box 92801 KIGALI GASABO 91109 • PRIVACY POLICY
+    </footer>
+    <script src="../JS/login.js"></script>
+  </body>
 </html>
+
